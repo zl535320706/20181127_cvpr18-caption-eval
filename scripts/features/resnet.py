@@ -179,5 +179,5 @@ def resnet152(pretrained=False):
     """Constructs a ResNet-152 model."""
     model = ResNet(Bottleneck, [3, 8, 36, 3])
     if pretrained:
-        model.load_state_dict(torch.load('./checkpoints/imagenet/resnet152.pth'))
+        model.load_state_dict(torch.load('/home/zhangli/.torch/models/resnet152-b121ed2d.pth'))
     return model

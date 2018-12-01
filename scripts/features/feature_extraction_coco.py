@@ -1,6 +1,7 @@
 import argparse
 import time
 import os
+os.environ['CUDA_VISIBLE_DEVICES']='1'
 
 import torch
 import torch.nn as nn
@@ -15,9 +16,9 @@ import numpy as np
 from resnet import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data-dir', type=str, default=None, required=True,
+parser.add_argument('--data-dir', type=str, default='../../data/',#None, required=True,
                     help='data directory (default: None)')
-parser.add_argument('--coco-img-dir', type=str, default=None, required=True,
+parser.add_argument('--coco-img-dir', type=str, default='/home/zhangli/Datasets/COCO_2014/',#None, required=True,
                     help='directory storing the coco images (default: None)')
 args = parser.parse_args()
 

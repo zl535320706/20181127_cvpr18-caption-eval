@@ -2,6 +2,7 @@ import json
 import argparse
 import time
 import os
+os.chdir('/home/zhangli/20181127_cvpr18-caption-eval')
 import numpy as np
 import progressbar
 

@@ -2,6 +2,7 @@ import json
 import argparse
 import time
 import os
+os.chdir('/home/zhangli/20181127_cvpr18-caption-eval')
 import numpy as np
 import progressbar
 import nltk
@@ -9,7 +10,7 @@ import string
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument(
-        '--submission', type=str,
+        '--submission', type=str,default='./examples/neuraltalk_all_captions.json',
         help='Path to the json file that contains all the submissions.')
 parser.add_argument(
         '--word-to-idx', type=str, default="./data/word_to_idx.npy",
@@ -24,7 +25,7 @@ parser.add_argument(
         '--num-steps', type=int, default=15,
         help='Length of all captions (default 15).')
 parser.add_argument(
-        '--name', type=str, default='mysubmission',
+        '--name', type=str, default='neuraltalk',
         help='Name of the method.')
 
 args = parser.parse_args()
